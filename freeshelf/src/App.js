@@ -1,5 +1,6 @@
 import './App.css';
-import { useState } from "react"
+import BookCollection from "./BookCollection"
+import React  from 'react';
 
 console.log("console is working")
 
@@ -93,7 +94,7 @@ const books = [
 
     return (
       <>
-        <h1>Book Collection</h1>
+        <h1>Javascript Book Collection</h1>
         {books.map((book, idx) => (
           <BookCollection book={book} key={idx} />
         ))}
@@ -102,37 +103,5 @@ const books = [
     )
 
 }
-
-function BookCollection ({ book }) {
-  const [expanded, setExpanded] = useState(false)
-  return (
-    <div className="single-book">
-      <h2>{book.title}</h2>
-      <h3>{book.author}</h3>
-      <p>{book.shortDescription}</p>
-      <img src={book.coverImageUrl} alt=""></img>
-<br></br>
-<br></br>
-      <button onClick={() => setExpanded(!expanded)}>
-        {expanded ? "Show Less" : "Show More"}
-      </button>
-        {expanded ? ( 
-        <>
-          <h4>More Info:</h4>
-          <ul>
-            <h5>URL: <a href="book.url" alt="">{book.url}</a> </h5>
-            {book.publisher ? <h5>Publisher: {book.publisher}</h5> : <></>}
-            {book.publicationDate ? <h5>Publication Date: {book.publicationDate}</h5> : <></>}
-            <h5>Full Description: </h5> <p>{book.detailedDescription}</p>
-          </ul>
-        </>
-        ) : (
-          ""
-        )}
-      </div>
-    )
-
-}
-
 
 export default App;

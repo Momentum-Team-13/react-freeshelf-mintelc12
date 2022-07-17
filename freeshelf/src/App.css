@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+body {
+  background-image: linear-gradient(to bottom right, rgb(232, 215, 215), rgb(228, 228, 174));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: Edu VIC WA NT Beginner;
+  font-size: 60px;
+  text-align: center; 
+  background-color: gold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+  max-width: 300px;
+  border: 5px solid rgb(241, 232, 190);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.single-book {
+  background: rgb(188, 157, 136);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 4px solid white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+  width: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex-direction: row;
+  margin: 10px;
+  padding: 5px;
 }
